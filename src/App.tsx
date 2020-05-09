@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+import StatesContainer from './components/StatesContainer';
 
 const App = () => {
   return (
-    <div className="App">
-			böb
-    </div>
+		<StatesContainer />
   );
 }
 
