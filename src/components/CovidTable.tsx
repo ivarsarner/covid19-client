@@ -19,7 +19,7 @@ interface Props {
 
 const useStyles = makeStyles({
   table: {
-    maxWidth: 500,
+    maxWidth: 'sm',
   },
 });
 
