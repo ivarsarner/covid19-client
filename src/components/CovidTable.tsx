@@ -11,35 +11,38 @@ import Paper from '@material-ui/core/Paper';
 interface AmericanStateObject {
   state: string;
   hospitalizedCurrently: number | null;
+  deaths: number;
 }
 
 interface Props {
   americanStates: AmericanStateObject[];
 }
 
-const useStyles = makeStyles({
+/* const useStyles = makeStyles({
   table: {
-    maxWidth: 'sm',
+    maxWidth: 'md',
   },
-});
+}); */
 
 const CovidTable: React.FC<Props> = ({ americanStates }) => {
-  const classes = useStyles();
+  //const classes = useStyles();
 
   return (
     <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="Table of Covid-19 cases in America">
+      <Table aria-label="Table of Covid-19 cases in America">
         <TableHead>
           <TableRow>
             <TableCell>State</TableCell>
             <TableCell align="right">Currently in hospital</TableCell>
+            <TableCell align="right">Latest deaths in 3 days</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {americanStates.map((state) => (
-            <TableRow key={state.state}>
-              <TableCell>{state.state}</TableCell>
-              <TableCell align="right">{state.hospitalizedCurrently || 0}</TableCell>
+          {americanStates.map(({ state, hospitalizedCurrently, deaths }) => (
+            <TableRow key={state}>
+              <TableCell>{state}</TableCell>
+              <TableCell align="right">{hospitalizedCurrently || 0}</TableCell>
+              <TableCell align="right">{deaths}</TableCell>
             </TableRow>
           ))}
         </TableBody>

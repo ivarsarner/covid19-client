@@ -17,12 +17,18 @@ const CovidTableContainer: React.FC = () => {
 
   const getCovidData = async () => {
     try {
-      const { data } = await axios.get('https://covidtracking.com/api/v1/states/current.json');
-      console.log(data[0]);
+      const { data: currentData } = await axios.get('https://covidtracking.com/api/v1/states/current.json');
+      const { data: newDeathsData } = await axios.get('http://localhost:9000/');
+      //console.log(data[0]);
+      //console.log(response.data);
       setCovidData({
         status: 'success',
         error: '',
-        americanStates: data,
+        americanStates: currentData.map((item: any, index: any) => ({
+          state: item.state,
+          hospitalizedCurrently: item.hospitalizedCurrently,
+          deaths: newDeathsData[index].deaths,
+        })),
       });
     } catch (error) {
       setCovidData({
@@ -47,7 +53,7 @@ const CovidTableContainer: React.FC = () => {
         <>
           <CssBaseline />
           <main>
-            <Container maxWidth="sm">
+            <Container maxWidth="md">
               <Header />
               <CovidTable americanStates={americanStates} />
             </Container>

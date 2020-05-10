@@ -4,7 +4,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
-  heroContent: {
+  headerContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(4, 0, 2),
   },
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.heroContent}>
+    <div className={classes.headerContent}>
       <Container maxWidth="sm">
         <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
           Covid-19 cases in USA
