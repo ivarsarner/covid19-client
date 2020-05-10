@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
-import StatesContainer from './components/StatesContainer';
+import CovidTableContainer from './components/CovidTableContainer';
 
 const App = () => {
-  return (
-		<StatesContainer />
-  );
-}
+  return <CovidTableContainer />;
+};
 
 export default App;
