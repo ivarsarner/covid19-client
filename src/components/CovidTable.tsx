@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -18,15 +17,7 @@ interface Props {
   americanStates: AmericanStateObject[];
 }
 
-/* const useStyles = makeStyles({
-  table: {
-    maxWidth: 'md',
-  },
-}); */
-
 const CovidTable: React.FC<Props> = ({ americanStates }) => {
-  //const classes = useStyles();
-
   return (
     <TableContainer component={Paper}>
       <Table aria-label="Table of Covid-19 cases in America">
@@ -34,7 +25,7 @@ const CovidTable: React.FC<Props> = ({ americanStates }) => {
           <TableRow>
             <TableCell>State</TableCell>
             <TableCell align="right">Currently in hospital</TableCell>
-            <TableCell align="right">Latest deaths in 3 days</TableCell>
+            <TableCell align="right">New deaths in the last 3 days</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

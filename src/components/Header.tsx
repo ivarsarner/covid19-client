@@ -14,17 +14,15 @@ const Header: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.headerContent}>
-      <Container maxWidth="sm">
-        <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
-          Covid-19 cases in USA
-        </Typography>
-        <Typography variant="h6" align="center" color="textSecondary" paragraph>
-          The table below uses data from <a href="https://covidtracking.com">covidtracking.com</a> to show the amount of
-          people who are hospitalized in USA.
-        </Typography>
-      </Container>
-    </div>
+    <Container className={classes.headerContent}>
+      <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
+        Covid-19 cases in USA
+      </Typography>
+      <Typography variant="subtitle1" align="center" color="textSecondary" paragraph>
+        The table below uses data from <a href="https://covidtracking.com">The COVID Tracking Project</a> to show the
+        amount of hospitalized patients in USA, as well as new deaths in the last 3 days.
+      </Typography>
+    </Container>
   );
 };
 
