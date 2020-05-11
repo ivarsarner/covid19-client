@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   headerContent: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(4, 0, 2),
+    padding: theme.spacing(2, 2),
   },
 }));
 

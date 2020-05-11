@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app 1`] = `
+<div>
+  <main>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthMd"
+    >
+      <div
+        class="MuiContainer-root makeStyles-headerContent-9 MuiContainer-maxWidthLg"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary MuiTypography-gutterBottom MuiTypography-alignCenter"
+        >
+          Covid-19 cases in USA
+        </h4>
+        <p
+          class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-paragraph MuiTypography-alignCenter"
+        >
+          The table below uses data from 
+          <a
+            href="https://covidtracking.com"
+          >
+            The COVID Tracking Project
+          </a>
+           to show the amount of hospitalized patients in USA, as well as new deaths in the last 3 days.
+        </p>
+      </div>
+      <div
+        class="makeStyles-root-40"
+      >
+        <div>
+          Loading...
+        </div>
+        <div
+          class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+          role="progressbar"
+          style="width: 40px; height: 40px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+`;

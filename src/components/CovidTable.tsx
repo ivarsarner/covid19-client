@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper';
 
 interface AmericanStateObject {
   state: string;
-  hospitalizedCurrently: number | null;
+  hospitalizedCurrently: number;
   deaths: number;
 }
 

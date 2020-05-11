@@ -4,6 +4,7 @@ import CovidTable from './CovidTable';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
+import Loader from './Loader';
 
 const initialState = {
   status: 'loading',
@@ -39,23 +40,26 @@ const CovidTableContainer: React.FC = () => {
 
   return (
     <>
-      {status === 'loading' ? (
-        <div>Loading...</div>
-      ) : status === 'error' ? (
-        <div>{error}</div>
-      ) : status === 'success' ? (
-        <>
-          <CssBaseline />
-          <main>
-            <Container maxWidth="md">
-              <Header />
-              <CovidTable americanStates={americanStates} />
-            </Container>
-          </main>
-        </>
-      ) : (
-        <div>No data found</div>
-      )}
+      <CssBaseline />
+      <main>
+        <Container maxWidth="md">
+          <Header />
+          {status === 'loading' ? (
+            <>
+              <Loader />
+            </>
+          ) : status === 'error' ? (
+            <div>
+              An error has occured: <br></br>
+              {error}
+            </div>
+          ) : status === 'success' ? (
+            <CovidTable americanStates={americanStates} />
+          ) : (
+            <div>No data found</div>
+          )}
+        </Container>
+      </main>
     </>
   );
 };
