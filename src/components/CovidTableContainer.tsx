@@ -16,9 +16,9 @@ const CovidTableContainer: React.FC = () => {
   const [covidData, setCovidData] = useState(initialState);
   const { status, error, americanStates } = covidData;
 
-  const getCovidData = async () => {
+  const getCovidData = async (): Promise<void> => {
     try {
-      const url = process.env.REACT_APP_API_URL || '';
+      const url = process.env.REACT_APP_API_URL || 'http://localhost:9000';
       const { data } = await axios.get(url);
       setCovidData({
         status: 'success',

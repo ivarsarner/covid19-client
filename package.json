@@ -50,6 +50,5 @@
     "eslint-plugin-react": "^7.19.0",
     "prettier": "^2.0.5",
     "netlify-cli": "^2.48.0"
-  },
-  "proxy": "http://localhost:9000"
+  }
 }
