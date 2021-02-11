@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import CovidTableContainer from './components/CovidTableContainer';
 
-const App = () => {
+const App: React.FC = () => {
   return <CovidTableContainer />;
 };
 
